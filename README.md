@@ -1,50 +1,23 @@
-# React + TypeScript + Vite
+# Trending music project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description 
 
-Currently, two official plugins are available:
+This is a small project built in React + Vite that uses Audius API to display the top trending tracks in the platform. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This app was built under the timeframe of under 2 hours and uses the default template from Vite with Typescript + Chakra UI for the styling & React Query for the data fetching and management. 
 
-## Expanding the ESLint configuration
+💅 A list of a few nice features:
+- Displays the tracks with a few filters by genre
+- Let's you search by track title and/or genre of music 
+- Ability to like specific tracks and sort the tracks by liked first
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## How to run the project 
+1. Run `npm install`
+2. Run `npm run dev`
+3. See console for the port used to run locally 
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Nice to haves in the future
+1. Add tests for the filtering, sorting logic
+2. Add a nice prettier formatting to the code, this is more of a nitpick but things like the prop string formatting could be cleaner. 
+3. Display user info of the track
+4. Add more filters 
